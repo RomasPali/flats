@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="search">
+        <app-search (flats)="onListSearched($event)"></app-search>
+    </div>
+    <div class="list">
+        <app-list [flats]="flats"></app-list>
+    </div>
+</div>

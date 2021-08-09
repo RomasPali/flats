@@ -1,0 +1,53 @@
+<div class="container">
+    <form [formGroup]="registerForm">
+        <div class="mat">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="formAddress" [(ngModel)]="flat.address">
+                <mat-error *ngIf="registerForm.get('formAddress').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Floor</mat-label>
+                <input matInput formControlName="formFloor" [(ngModel)]="flat.floor">
+                <mat-error *ngIf="registerForm.get('formFloor').invalid">
+                    Only [0-99] digits
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Rooms</mat-label>
+                <input matInput formControlName="formRooms" [(ngModel)]="flat.rooms">
+                <mat-error *ngIf="registerForm.get('formRooms').invalid">
+                    Only [0-99] digits
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Area</mat-label>
+                <input matInput formControlName="formArea" [(ngModel)]="flat.area">
+                <mat-error *ngIf="registerForm.get('formArea').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="formPrice" [(ngModel)]="flat.price">
+                <mat-error *ngIf="registerForm.get('formPrice').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="formDescription" [(ngModel)]="flat.description">
+                <mat-error *ngIf="registerForm.get('formDescription').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <div class="buttons">
+                <div><button mat-raised-button color="primary" [disabled]="registerForm.invalid" (click)="save()">SAVE</button></div>
+                <div><button mat-raised-button color="primary" [disabled]="registerForm.invalid" (click)="delete()">DELETE</button></div>
+                <div><button mat-raised-button color="primary" [disabled]="registerForm.invalid" (click)="goOnMAin()">BACK</button></div>
+            </div>
+        </div>
+    </form>
+</div>

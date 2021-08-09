@@ -1,0 +1,20 @@
+.container {
+    height: calc(100vh - 150px);
+}
+
+.mat {
+    display: grid;
+    padding: 10%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons div {
+    padding: 10px;
+}

@@ -1,0 +1,11 @@
+.header {
+    height: 100px;
+}
+
+.container {
+    height: calc(100vh - 150px);
+}
+
+.footer {
+    height: 50px;
+}

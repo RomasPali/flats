@@ -1,0 +1,28 @@
+<mat-card class="tp-card">
+    <mat-card-header>
+        <mat-card-title>id: {{flat.id}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="flat-container">
+            <div class="flat-descript">
+                <div>Address: </div>
+                <div>Floor: </div>
+                <div>Rooms: </div>
+                <div>Area: </div>
+                <div>Price: </div>
+                <div> Description: </div>
+            </div>
+            <div class="flat-var">
+                <div>{{flat.address}}</div>
+                <div>{{flat.floor}}</div>
+                <div>{{flat.rooms}}</div>
+                <div>{{flat.area}}</div>
+                <div>{{flat.price}}</div>
+                <div>{{flat.description}}</div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="goOnEdit(flat.id)">Edit</button>
+    </mat-card-actions>
+</mat-card>

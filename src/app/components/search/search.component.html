@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="create">
+        <button mat-raised-button color="primary" (click)="goOnCreate()">CREATE</button>
+    </div>
+
+    <form [formGroup]="registerForm">
+        <div class="search">
+            <mat-form-field>
+                <mat-label>Price from</mat-label>
+                <input matInput formControlName="formPriceFrom" [(ngModel)]="searchDto.priceFrom">
+                <mat-error *ngIf="registerForm.get('formPriceFrom').invalid">
+                    Enter number
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Price to</mat-label>
+                <input matInput formControlName="formPriceTo" [(ngModel)]="searchDto.priceTo">
+                <mat-error *ngIf="registerForm.get('formPriceTo').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Floors from</mat-label>
+                <input matInput formControlName="formFloorFrom" [(ngModel)]="searchDto.floorsFrom">
+                <mat-error *ngIf="registerForm.get('formFloorFrom').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Floors to</mat-label>
+                <input matInput formControlName="formFloorTo" [(ngModel)]="searchDto.floorsTo">
+                <mat-error *ngIf="registerForm.get('formFloorTo').invalid">
+                    Enter valid value
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="registerForm.invalid" (click)="search()">Search</button>
+        </div>
+    </form>
+</div>
