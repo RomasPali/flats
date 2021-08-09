@@ -1,2 +1,2 @@
 # flats-front-end
-Angular part of Fullstack angular/spring boot based Flats for sales project
+Angular part of fullstack angular/spring boot based Flats for sales project
